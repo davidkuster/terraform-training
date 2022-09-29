@@ -1,9 +1,9 @@
 # O'Reilly Terraform Training
 
 Raju Gandhi
-@looselytyped
-raju.gandhi@gmail.com
-https://github.com/looselytyped/terraform-workshop/
+<br>@looselytyped
+<br>raju.gandhi@gmail.com
+<br>https://github.com/looselytyped/terraform-workshop/
 
 [Slides](terraformcloud719221663171366112.pdf)
 
@@ -23,7 +23,8 @@ Providers translate your code into something the client understands
 TF is written in HCL (Hashicorp Configuration Language)
 
 
-https://github.com/hashicorp/terraform-provider-aws/ - OSS
+https://github.com/hashicorp/terraform-provider-aws/
+- OSS
 - 3.4k issues and 409 open PRs (eek!)
 
 
@@ -72,6 +73,7 @@ TF only runs in the dir you run in. It doesn't read subdirectories or parent dir
 ### Structuring directories
 
 Recommends having a folder per env
+```
 - base
   - base.tf
   - outputs.tf
@@ -91,12 +93,14 @@ Recommends having a folder per env
   - providers.tf
   - variables.tf
   - **prod-specific terraform.tfstate file**
+```
 
 Can then do an apply and a destroy per env, and not worry about touching your other env.
 
 For instance, dev might get blown away and recreated weekly. Prod env is only touched when blue/green deploys happen, and never fully blown away.
 
 Can also manage this differently:
+```
 - dev
   - networking
     - `*.tf`
@@ -104,13 +108,10 @@ Can also manage this differently:
     - `*.tf`
   - storage
     - `*.tf`
-
+```
 ^ set up networking and storage because those are pretty consistent and don't change often. Whereas services are likely to churn often.
 
 But now it's on you to manually remember what to run when. (Presumably could be automated.) But it's more surgical so you're touching less at a time.
-
-
-
 
 ### Tagging
 
@@ -172,7 +173,6 @@ resource "aws_instance" "example" {
 Note to use the "data sources" part of the doc, not the "resources" part:
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
 
-
 ### Static analysis tools
 
 - terraform fmt
@@ -182,7 +182,6 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/a
   - does deeper investigation than `validate` but it's slower since it's actually interacting with AWS
 
 ^ can use these in ci pipelines (maybe fail if `terraform fmt` needs to be run...)
-
 
 ### Testing
 
@@ -209,7 +208,6 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/a
 
 - Ansible
   - can orchestrate TF
-
 
 ### Workflow
 
