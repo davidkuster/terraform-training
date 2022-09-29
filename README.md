@@ -1,7 +1,7 @@
 # O'Reilly Terraform Training
 
 Raju Gandhi
-<br>@looselytyped
+<br>[@looselytyped](https://twitter.com/looselytyped)
 <br>raju.gandhi@gmail.com
 <br>https://github.com/looselytyped/terraform-workshop/
 
