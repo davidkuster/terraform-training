@@ -82,7 +82,7 @@ Recommends having a folder per env
   - outputs.tf
   - providers.tf
   - variables.tf
-  - **dev-specific terraform.tfstate file**
+  - dev-specific terraform.tfstate file
 - modules
   - main.tf
   - outputs.tf
@@ -92,7 +92,7 @@ Recommends having a folder per env
   - outputs.tf
   - providers.tf
   - variables.tf
-  - **prod-specific terraform.tfstate file**
+  - prod-specific terraform.tfstate file
 ```
 
 Can then do an apply and a destroy per env, and not worry about touching your other env.
@@ -103,11 +103,11 @@ Can also manage this differently:
 ```
 - dev
   - networking
-    - `*.tf`
+    - *.tf
   - services
-    - `*.tf`
+    - *.tf
   - storage
-    - `*.tf`
+    - *.tf
 ```
 ^ set up networking and storage because those are pretty consistent and don't change often. Whereas services are likely to churn often.
 
