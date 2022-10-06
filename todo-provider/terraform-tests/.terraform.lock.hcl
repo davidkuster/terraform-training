@@ -1,0 +1,25 @@
+# This file is maintained automatically by "terraform init".
+# Manual edits may be lost in future updates.
+
+provider "registry.terraform.io/spkane/todo" {
+  version     = "1.2.3"
+  constraints = "1.2.3"
+  hashes = [
+    "h1:z/m8/0L/fb+khLa1/UeWsDLR+n9u3Wayp001oCqigi4=",
+    "zh:07f556ec15ada7c5ec293c98260143fcc9ed8c87361ce17624fe729e6d300ecf",
+    "zh:082131f41587b6223352097e18228c9eb45cd753cca273fb13096f6bcd41ebd9",
+    "zh:1c3e89cf19118fc07d7b04257251fc9897e722c16e0a0df7b07fcd261f8c12e7",
+    "zh:30a532d959b3f0a96bc9d2ac2f5d354579719fff7290ec24360ee1c4a4f70563",
+    "zh:7213004685b84ae232799ce38e42a1262ffbf46fcdd9228b6aba973ed3c21732",
+    "zh:7758676fa820919b50bd4b51e1125a156d6c1021ca84a343077984600ce65e3d",
+    "zh:78b788de9f094c5290bcc72446f181ad760dd8c8310f9a32d52f521ba22e612d",
+    "zh:86eef674554c5e626a4a2999891951f393769fe3887e47a813bf92c603d7c9eb",
+    "zh:adcc80eac6853faf1bbc9a63e9bebf9c15b259d798a1b83fa699829001678163",
+    "zh:c1c71aed96af59ac4457e880caa73201a9dc819218973c651cb5f6765e4133e9",
+    "zh:c30b26e67aaf39331ba9795a31b922e9205f2ed3f3ba96156f9515c466bfd88b",
+    "zh:ca8be2fb7b606b7278d003daa45927866c500bbed4e0c88cb87382ecfd756f61",
+    "zh:e6cb85cce790301646b86047f02d244dc9680c17677aee0e648cd50af9e03068",
+    "zh:f98f9697465d3dffaf2b2cf357406fc11ebb5df5e3d18384b4097c3b865c5605",
+    "zh:fda7bc447f34c7640e9635b2df200a1110d1214c199a57bed5ab55f975772672",
+  ]
+}
