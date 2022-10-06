@@ -35,3 +35,15 @@ output "todo_2_ids" {
 #   "54",
 #   "60",
 # ]
+
+
+
+### using the module ###
+
+output "first_series_ids" {
+  value = module.series-data.first_series_ids
+}
+
+output "second_series_ids" {
+  value = module.series-data.second_series_ids
+}

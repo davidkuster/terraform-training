@@ -48,3 +48,18 @@ resource "todo" "test2" {
   description = "${count.index}-2 ${var.purpose} todo (linked to ${data.todo.foreign.description})"
   completed = false
 }
+
+
+
+### using a module ###
+
+module "series-data" {
+  source       = "../modules/todo-test-data"
+  number       = 5
+  purpose      = "testing"
+  team_name    = "oreilly"
+  descriptions = ["my first completed todo", "my second completed todo",
+                  "my third completed todo", "my fourth completed todo",
+                  "my fifth completed todo"
+                 ]
+}
