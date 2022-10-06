@@ -76,18 +76,53 @@ _(I think I heard it like that.)_ :thinking_face:
 Providers == plugins
 - wrappers to APIs you want to interact with
 
+
+### Data sources
+
 `hashicorp/external` - special case
 * provider that doesn't interact with an API, but allows you to run a local script and get data back (such as a local IP)
 
+Able to read an external tfstate file:
+```hcl
+data "terraform_remote_state" "training_account" {
+  backend = "s3"
+  config = {
+    profile = "spkane-training"
+    bucket = "spkane-training-tfstate"
+    key    = "core/training-account.tfstate"
+    region = "us-east-1"
+   }
+}
+```
+
+Examples at https://github.com/spkane/todo-for-terraform/blob/main/terraform-infrastructure/data.tf
+
+
+Data sources (data objects) are read-only
+
+
+### Functions
 
 Functions
 ```hcl
 public_key = file(var.ssh_public_key_path)
 ```
 
+Categories
+* numeric
+* string
+* collection
+* encoding
+* filesystem
+* date and time
+* hash and crypto
+* IP network
+* type conversion
 
-Data sources (data objects) are read-only
+See https://www.terraform.io/language/functions
 
+
+### Manual API interaction
 
 ```bash
 $ http todo-api.spkane.org:8080
@@ -187,3 +222,7 @@ Initializing modules...
 ...
 ```
 
+
+### GraphViz representation of how TF figures out what to do
+
+![](https://raw.githubusercontent.com/spkane/todo-for-terraform/main/terraform-infrastructure/graph.svg)
